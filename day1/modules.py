@@ -8,7 +8,7 @@ print math.sin(45), math.tan(45)
 # returns list of available methods
 print dir(math)
 
-# returns help for a specfic method
+# returns help for a specific method
 help(math.sin)
 
 # ways to import modules
@@ -16,7 +16,7 @@ help(math.sin)
 # generic import
 import random
 
-random.random()
+print random.random()
 
 # function import
 from math import cos, tan

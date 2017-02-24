@@ -24,7 +24,7 @@ while True:
 
     print 'valid moves',valid_moves
 
-    if move in valid_moves:
+    if mp in valid_moves:
         board[mp],board[zp] = 0,move
     else:
         print "Please enter a valid move"

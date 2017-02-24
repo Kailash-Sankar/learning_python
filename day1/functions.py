@@ -19,33 +19,37 @@ def addMany(*args):
     print type(args)
     print sum(args),min(args),max(args)
 
+addMany(1,3,67,22,12,90)
 
 #got type error
 p = lambda x,y: (x+y,x-y)
 print p(12,2)
 
-
+print "-*-"
 def avgThis(*args):
     return sum(args)/float(len(args)) #type cast at least one number to float
 
 print avgThis(4,6,19,1,20)
 print avgThis(4,5)
+print "-**-"
 
 def avgThis2(a,b,*args):
     return ( a + b +sum(args) )/(len(args)+2.0) #adding 2.0 does the type casting for us
 
 print avgThis2(4,5)
-
+print avgThis2(4,5,3)
+print "-***-"
 
 def avgThis3(*args):
     if ( len(args) < 2 ):
-            print "Minimum 2 args required"
+            return "Minimum 2 args required"
     else:
         return sum(args) / float(len(args))  # adding 2.0 does the type casting for us
 
 
 print avgThis3(4, 5)
 print avgThis3()
+print "---"
 
 def magik(**kwargs):
     print type(kwargs)
@@ -55,8 +59,8 @@ def magik(**kwargs):
 
 magik()
 magik(alpha=23,beta=67,gamma=578)
-magik(alpha="hello",BeTa="world")
-
+magik(alpha="hello",Beta="world")
+print "---"
 
 def create_emp(id,name,**kwargs):
     print id,name,kwargs
@@ -77,33 +81,36 @@ print lowPoly(5,6,1)
 
 mul = lambda a,b:a*b
 pow = lambda a,b:a**b
-rept = lambda a,b: a+b * a-b
-
+rept = lambda a,b: (a+b) * (a-b)
+print "---"
 print type(mul)
 print mul(2,3)
 print pow(2,3)
 print rept(2,3)
+print rept(3,2)
+print "---"
 
 age = 20
 def gloo():
+    print age
     global age #by default global variables are readonly
-    print age
     age = age + 10
-    print age
+    print 'inside function',age
 
 gloo();
-print age
+print 'global',age
 
 def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
-    print "-- This parrot wouldn't", action,
+    print "- This parrot wouldn't", action,
     print "if you put", voltage, "volts through it"
-    print "-- Lovely plumage, the", type
-    print "-- it's ", state, "!"
+    print "- Lovely plumage, the", type
+    print "- it's ", state, "!"
+    print "---"
 
 
 parrot(100)
 parrot('100')
 parrot(100, action='wiggle')
 
-parrot(110, voltage=220)  # duplicate value for an argument
-parrot(voltage=5.0, "dead")  # non keyword argument following keyword
+# parrot(110, voltage=220)  # duplicate value for an argument
+# parrot(voltage=5.0, "dead")  # non keyword argument following keyword
