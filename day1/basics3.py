@@ -25,7 +25,6 @@ print t
 
 s1 = {'apple', 'mango', 'banana', 'grape', 'tomato'}
 s2 = {'potato', 'tomato', 'cabbage'}
-
 print s1.intersection(s2)
 print s2.union(s1)
 print s1 - s2, s2 - s1
