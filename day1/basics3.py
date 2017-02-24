@@ -44,7 +44,10 @@ print d, list(d)
 print "-*-"
 print b, str(b)
 print c, str(c)
-print str(4.567)
+print str(4.5670)
+
+print "-**-"
+print dict([('a',3),('b',4)])
 
 k = [3, 4, 5, 6, 7, 8, 9]
 k[3:3] = [99, 98, 97]
