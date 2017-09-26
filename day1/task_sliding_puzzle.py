@@ -2,11 +2,11 @@
 board = [8,5,7,6,3,4,2,0,1]
 
 while True:
-    print board[:3]
-    print board[3:6]
-    print board[6:]
+    print(board[:3])
+    print(board[3:6])
+    print(board[6:])
 
-    move = int(raw_input('Enter your move:'))
+    move = int(input('Enter your move:'))
     mp = board.index(move)
     zp = board.index(0)
 
@@ -22,19 +22,15 @@ while True:
     if zp % 3 == 2:
         valid_moves.remove(zp+1)
 
-    print 'valid moves',valid_moves
+    print('valid moves',valid_moves)
 
     if mp in valid_moves:
         board[mp],board[zp] = 0,move
     else:
-        print "Please enter a valid move"
+        print("Please enter a valid move")
 
 
 
 '''
 x-1,x+1,x+3,x-3
 '''
-
-
-
-

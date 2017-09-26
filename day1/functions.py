@@ -3,42 +3,42 @@
 def sub(a,b,c=100): #default arguments
     return a - b + c
 
-print sub(4,56)
-print sub (4,8,4)    #positional parameters
-print sub (b=10,a=5) #keyword parameters
+print(sub(4,56))
+print(sub(4,8,4))    #positional parameters)
+print(sub(b=10,a=5)) #keyword parameters)
 
 def sumdiff(a,b):
     return a+b,a-b
 
-print sumdiff(45,45),sumdiff(4,5),sumdiff(7,10)
+print(sumdiff(45,45),sumdiff(4,5),sumdiff(7,10))
 
 x,y = sumdiff(89,1)
-print x,y
+print(x,y)
 
 def addMany(*args):
-    print type(args)
-    print sum(args),min(args),max(args)
+    print(type(args))
+    print(sum(args),min(args),max(args))
 
 addMany(1,3,67,22,12,90)
 
 #got type error
 p = lambda x,y: (x+y,x-y)
-print p(12,2)
+print(p(12,2))
 
-print "-*-"
+print("-*-")
 def avgThis(*args):
     return sum(args)/float(len(args)) #type cast at least one number to float
 
-print avgThis(4,6,19,1,20)
-print avgThis(4,5)
-print "-**-"
+print(avgThis(4,6,19,1,20))
+print(avgThis(4,5))
+print("-**-")
 
 def avgThis2(a,b,*args):
     return ( a + b +sum(args) )/(len(args)+2.0) #adding 2.0 does the type casting for us
 
-print avgThis2(4,5)
-print avgThis2(4,5,3)
-print "-***-"
+print(avgThis2(4,5))
+print(avgThis2(4,5,3))
+print("-***-")
 
 def avgThis3(*args):
     if ( len(args) < 2 ):
@@ -47,23 +47,23 @@ def avgThis3(*args):
         return sum(args) / float(len(args))  # adding 2.0 does the type casting for us
 
 
-print avgThis3(4, 5)
-print avgThis3()
-print "---"
+print(avgThis3(4, 5))
+print(avgThis3())
+print("---")
 
 def magik(**kwargs):
-    print type(kwargs)
-    print len(kwargs)
-    print kwargs
+    print(type(kwargs))
+    print(len(kwargs))
+    print(kwargs)
 
 
 magik()
 magik(alpha=23,beta=67,gamma=578)
 magik(alpha="hello",Beta="world")
-print "---"
+print("---")
 
 def create_emp(id,name,**kwargs):
-    print id,name,kwargs
+    print(id,name,kwargs)
 create_emp(12,'kailash',work='WF',hours=8)
 
 
@@ -71,41 +71,41 @@ def super_flexible_function(*args,**kwargs):
     pass
 
 def lowPoly(a,b,c,*sides,**options):
-    print a,b,c,sides
-    print options
+    print(a,b,c,sides)
+    print(options)
 
     return a + b + c + sum(sides)
 
-print lowPoly(4,5,6,9,10,unit="sqcm")
-print lowPoly(5,6,1)
+print(lowPoly(4,5,6,9,10,unit="sqcm"))
+print(lowPoly(5,6,1))
 
 mul = lambda a,b:a*b
 pow = lambda a,b:a**b
 rept = lambda a,b: (a+b) * (a-b)
-print "---"
-print type(mul)
-print mul(2,3)
-print pow(2,3)
-print rept(2,3)
-print rept(3,2)
-print "---"
+print("---")
+print(type(mul))
+print(mul(2,3))
+print(pow(2,3))
+print(rept(2,3))
+print(rept(3,2))
+print("---")
 
 age = 20
 def gloo():
-    print age
+    print(age)
     global age #by default global variables are readonly
     age = age + 10
-    print 'inside function',age
+    print('inside function',age)
 
 gloo();
-print 'global',age
+print('global',age)
 
 def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
-    print "- This parrot wouldn't", action,
-    print "if you put", voltage, "volts through it"
-    print "- Lovely plumage, the", type
-    print "- it's ", state, "!"
-    print "---"
+    print("- This parrot wouldn't", action,)
+    print("if you put", voltage, "volts through it")
+    print("- Lovely plumage, the", type)
+    print("- it's ", state, "!")
+    print("---")
 
 
 parrot(100)
